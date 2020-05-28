@@ -1,13 +1,8 @@
 FROM golang:latest
 
 WORKDIR /app
-
 COPY main.go /app
-
 RUN go get -d -v ./...
-
 EXPOSE 8080
-
 RUN go build -o main .
-
-CMD ["/app/main"]
+CMD /app/main
