@@ -19,9 +19,8 @@ git clone https://bitbucket.org/bexstech/bexs-devops-exam.git
 git clone https://github.com/rdmendon/bexs-devops-exam_aux
 cd bexs-devops-exam_aux
 mv Dockerfile_fe ../bexs-devops-exam/frontend/src/frontend/Dockerfile
-sudo chmod 777 docker-compose.yml
+sudo chmod 777 docker-compose.yml docker-compose-start.sh
 mv docker-compose.yml docker-compose-start.sh ../bexs-devops-exam/
-
 sudo chmod 777 ../bexs-devops-exam/frontend/src/frontend/*
 mv Dockerfile_be ../bexs-devops-exam/backend/src/backend/Dockerfile
 sudo chmod 777 ../bexs-devops-exam/backend/src/backend/*
@@ -31,7 +30,7 @@ cd ../bexs-devops-exam/backend/src/backend/
 docker build --tag richard_be:1.0 .
 cd /home/ec2-user/bexs-devops-exam
 sudo ./docker-compose-start.sh
-sudo docker-compose up
+
 
 
 
