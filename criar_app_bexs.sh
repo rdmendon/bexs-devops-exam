@@ -30,6 +30,7 @@ cd ../bexs-devops-exam/backend/src/backend/
 docker build --tag richard_be:1.0 .
 cd /home/ec2-user/bexs-devops-exam
 ./docker-compose-start.sh
+sudo docker-compose up
 
 
 
