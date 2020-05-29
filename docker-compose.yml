@@ -1,0 +1,22 @@
+version: '2.2'
+
+services:
+
+  frontend:
+    build: ./frontend/src/frontend
+    ports:
+      - "8000:8000"
+    networks:
+        - net_app
+
+  backend:
+    build: ./backend/src/backend
+    ports:
+        - "8080:8080"
+    networks:
+        - net_app
+    depends_on:
+        - frontend
+networks:
+  net_app:
+    driver: bridge
