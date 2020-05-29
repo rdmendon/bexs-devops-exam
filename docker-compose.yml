@@ -3,14 +3,14 @@ version: '2.2'
 services:
 
   frontend:
-    build: ./frontend/src/frontend
+    image: richard_fe:1.0
     ports:
       - "8000:8000"
     networks:
         - net_app
 
   backend:
-    build: ./backend/src/backend
+    image: richard_be:1.0
     ports:
         - "8080:8080"
     networks:
