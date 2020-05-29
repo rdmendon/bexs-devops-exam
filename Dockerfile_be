@@ -1,5 +1,4 @@
 FROM golang:latest
-
 WORKDIR /app
 COPY main.go /app
 RUN go get -d -v ./...
